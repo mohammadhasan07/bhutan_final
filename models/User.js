@@ -14,8 +14,9 @@ password: {
     type: String,
     required: true
 },
-avatar: {
-    type: String
+username: {
+    type: String,
+    required: true
 },
 date: {
     type: Date,
