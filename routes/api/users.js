@@ -21,7 +21,8 @@ User.findOne({ email: req.body.email })
         if (user)
         {
             return res.status(400).json({email: `email already exists`});
-        }else{
+        }
+        else {
             const avatar = gravatar.url(req.body.email, {
                 s: `200`,    //size
                 r: `pg`,     //rating
