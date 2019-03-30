@@ -1,6 +1,5 @@
 const express = require(`express`);
 const router = express.Router();
-const gravatar = require(`gravatar`);
 const bcrypt = require(`bcryptjs`);
 
 //Load User Model
@@ -15,6 +14,7 @@ router.get(`/test`, (req, res) => res.json({msg: "user works"}));
 // @route GET api/users/register
 // @desc Register user 
 // @access Public
+
 router.post(`/register`, (req, res) => {
 User.findOne({ email: req.body.email })
     .then (user => {

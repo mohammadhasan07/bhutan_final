@@ -1,7 +1,7 @@
 const express = require(`express`);
 const mongoose = require(`mongoose`);
 const bodyParser = require('body-parser');
-
+const cors = require(`cors`);
 const users = require(`./routes/api/users`);
 const profile = require(`./routes/api/profile`);
 const posts = require(`./routes/api/posts`);
@@ -25,7 +25,11 @@ mongoose
 
 app.get(`/`, (req, res) => res.send(`Hello World!`));
 
-
+app.use(cors({
+    origin: `http://localhost:3000`,
+    credentials: true
+  }));
+  
 // Use Routes
 app.use(`/api/users`, users);
 app.use(`/api/profile`, profile);
