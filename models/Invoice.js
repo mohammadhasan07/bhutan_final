@@ -6,12 +6,23 @@ const InvoiceSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: `users`
   },
-  product: {
-    type: Schema.Types.ObjectId,
-    ref: `product`
+  customerName: {
+    type: String,
+    required: true
+  },
+  customerEmail: {
+    type: String
+  },
+  customerPhone: {
+    type: Number,
+    required: true
   },
   products: [
     {
+      product: {
+        type: Schema.Types.ObjectId,
+        ref: `product`
+      },
       productName: {
         type: String,
         required: true
@@ -25,7 +36,31 @@ const InvoiceSchema = new Schema({
         required: true
       },
       amount: {
+        type: Number,
+        required: true
+      }
+    }
+  ],
+  services: [
+    {
+      product: {
+        type: Schema.Types.ObjectId,
+        ref: `service`
+      },
+      productName: {
         type: String,
+        required: true
+      },
+      brandName: {
+        type: String,
+        required: true
+      },
+      Quantity: {
+        type: Number,
+        required: true
+      },
+      amount: {
+        type: Number,
         required: true
       }
     }
