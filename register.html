@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS3 Contact Form</title>
+  </head>
+  <body>
+    <div id="contact">
+      <h1>register</h1>
+      <form action="http://localhost:5080/api/users/register" method="post">
+        <fieldset>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your Name"
+          />
+          <label for="name">email:</label>
+          <input
+            type="email"
+            id="name"
+            name="email"
+            placeholder="Enter your email"
+          />
+          <label for="name">Username:</label>
+          <input
+            type="text"
+            id="name"
+            name="username"
+            placeholder="Enter your username"
+          />
+
+          <label for="email">Password:</label>
+          <input
+            type="password"
+            id="email"
+            name="password"
+            placeholder="Enter your password"
+          />
+          <label for="email">reenter Password:</label>
+          <input
+            type="password"
+            id="email"
+            name="password2"
+            placeholder="Enter your password"
+          />
+
+          <input type="submit" value="login" />
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
